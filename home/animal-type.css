@@ -1,0 +1,23 @@
+.animal-type-filter {
+    height: 42px;
+    width: 130px;
+    font-size: 1.2em;
+    margin: 5px 0 30px 50px;
+    outline: none;
+}
+.info {
+  color: hsla(200, 100%, 27%, 1);
+  font-family: 'Kaushan Script', cursive;
+  cursor: zoom-in;
+}
+.info:hover::after {
+    content:attr(title);
+    font-family: 'Muli', sans-serif;
+    color: black;
+}
+.horns, .info {
+  background:hsla(153, 100%, 87%, 1);
+  text-align: center;
+  font-size: 1rem;
+  padding: 0.3em;
+}

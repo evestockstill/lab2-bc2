@@ -1,0 +1,9 @@
+header {
+  width: 100%;
+  height: 65px;
+  padding-top: 20px;
+  background:hsla(178, 100%, 28%, 1);
+  text-align: center;
+  font-size: 6.5rem;
+  text-shadow: 2px 2px 1px hsla(153, 100%, 87%, 1);
+}
