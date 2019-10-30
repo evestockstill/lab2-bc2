@@ -8,25 +8,26 @@ body html {
   padding: 0;
   background:hsla(178, 100%, 28%, 1);
 }
+main {
+  padding-bottom: 30px;
+}
 .list-animals {
   display: grid;
-  margin: 0 50px 50px 50px;
-  padding: 20px;
   padding-bottom: 30px;
-  border: 30px solid;
-  border-image: radial-gradient(hsla(153, 100%, 87%, 1), hsla(178, 100%, 28%, 1),hsla(200, 100%, 27%, 1),hsla(153, 100%, 87%, 1),hsla(178, 100%, 28%, 1),hsla(200, 100%, 27%, 1),hsla(190, 4%, 18%, 1)) 1;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
+  gap: 1em;
 }
-.grid, li {
+.animal, li {
   display: grid;
-  margin: 0.5em;
+  height: 300px;
+  width: 275px;
+ padding-left: 25px;
 }
 .animal-title {
   display: flex;
-  justify-content: center;
-  align-content: center;
-  padding: 5px;
+  justify-content: space-between;
+  align-items: center;
   font-size: 0.3em;
   height: 300px;
   width: 275px;
@@ -45,7 +46,6 @@ img {
   outline: 2px solid black;
   outline-offset: -3px;
 }
-
 legend {
   color:hsla(153, 100%, 87%, 1);
   text-shadow: 1px 1px 1px black;

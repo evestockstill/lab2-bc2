@@ -12,15 +12,13 @@ test('renders html from data', assert => {
     };
 
     const expected = /*html*/`
-            <li class="animals">
-        <div class="grid">
+            <li class="animal">
             <fieldset class="animal-title">
                 <legend>${animal.title}</legend>
                 <img class="pic" src="${animal.url}">
                     <p class="info" title ='${animal.description} and has ${animal.horns} horns'> ${animal.title}   </p>
                     <p class="horns"></p>
             </fieldset>
-        </div>
         </li>
     `;
     const props = { animal: animal };

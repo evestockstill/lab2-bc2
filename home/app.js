@@ -3,6 +3,7 @@ import Header from './header.js';
 import AnimalList from './animalList.js';
 import FilterAnimals from './filterAnimals.js';
 import animals from '../data/images.js';
+// import FilterByHorns from '../home/filterByHorns.js';
 
 class App extends Component {
 
@@ -22,24 +23,43 @@ class App extends Component {
         const filterAnimals = new FilterAnimals({
             animals: animals,
             onFilter: (animalKey) => {
-                let filterAnimals = null;
+                let filteredAnimals = null;
                 if (!animalKey) {
-                    filterAnimals = animals;
+                    filteredAnimals = animals;
                 }
                 else {
-                    filterAnimals = animals.filter(animal => {
-                        return animal.keyword === animalKey;
-                    });
+                    filteredAnimals = animals.filter(animal => animal.keyword === animalKey);
                 }
-                const updateProps = { animals: filterAnimals };
+                const updateProps = { animals: filteredAnimals };
                 animalList.update(updateProps);
             }
         });
-
         const filterAnimalsDOM = filterAnimals.renderDOM();
         const animalOptions = dom.querySelector('.animal-type-filter');
         animalOptions.appendChild(filterAnimalsDOM);
     }
+    
+
+    //     const filterByHorns = new FilterByHorns({
+    //         animals: animals,
+    //         onFilter: (animalHornKey) => {
+    //             let filteredByHorns = null;
+
+    //             if (filteredByHorns) {
+    //                 animals.filter(animal => animal.horns <= 5 === animalHornKey);
+    //             } else {
+    //                 filteredByHorns = animals.filter(animal => animal.horns >= 5 === animalHornKey);
+    //             }
+    //             const updateProps = { animals: filteredAnimals };
+    //             animalList.update(updateProps);
+    //         }
+    //     });
+    //     const filterByHornDOM = filterAnimals.renderDOM();
+    //     const hornOptions = dom.querySelector('.horn-type-filter');
+    //     hornOptions.appendChild(filterAnimalsDOM);
+    // }
+
+
     renderHTML() {
         return /*html*/`
             <div>
@@ -51,7 +71,15 @@ class App extends Component {
                 </main>
             </div>
         `;
+
     }
 }
+
+
+
+
+
+
+
 
 export default App;

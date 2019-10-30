@@ -3,7 +3,7 @@ export function renderAnimalItem(animal) {
         throw new Error('you need an animal');
     }
     const html = /*html*/`
-        <li class="animals">
+        <li class="animal">
         <div class="grid">
             <fieldset class="animal-title">
                 <legend>${animal.title}</legend>
